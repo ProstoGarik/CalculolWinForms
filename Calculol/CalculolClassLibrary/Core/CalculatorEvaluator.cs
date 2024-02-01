@@ -6,7 +6,52 @@ using System.Threading.Tasks;
 
 namespace Calculol.Core
 {
-    internal class CalculatorEvaluator
+    public class CalculatorEvaluator
     {
+        string[] operators = { "+", "-", "/", "*" };
+
+        public double EvaluatePostfix(List<string> equation)
+        {
+            double a;
+            double b;
+            Stack<double> values = new Stack<double>();
+            foreach (string token in equation)
+            {
+                if (!operators.Contains(token))
+                {
+                    values.Push(double.Parse(token));
+                }
+                else
+                {
+                    switch (token)
+                    {
+                        case "+":
+                            a = values.Pop();
+                            b = values.Pop();
+                            values.Push(a + b);
+                            break;
+
+                        case "-":
+                            a = values.Pop();
+                            b = values.Pop();
+                            values.Push(a - b);
+                            break;
+
+                        case "*":
+                            a = values.Pop();
+                            b = values.Pop();
+                            values.Push(a * b);
+                            break;
+
+                        case "/":
+                            a = values.Pop();
+                            b = values.Pop();
+                            values.Push(a / b);
+                            break;
+                    }
+                }
+            }
+            return values.Peek();
+        }
     }
 }

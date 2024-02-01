@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculol.Core
 {
-    internal class CalculatorParser
+    public class CalculatorParser
     {
         string[] tokens;
         Stack<string> stack = new Stack<string>();

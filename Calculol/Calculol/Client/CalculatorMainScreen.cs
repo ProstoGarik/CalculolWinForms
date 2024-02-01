@@ -23,62 +23,115 @@ namespace Calculol
 
         private void Number1Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('1');
+            viewModel.AddToEq('1');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number2Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('2');
+            viewModel.AddToEq('2');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number3Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('3');
+            viewModel.AddToEq('3');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number4Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('4');
+            viewModel.AddToEq('4');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number5Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('5');
+            viewModel.AddToEq('5');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number6Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('6');
+            viewModel.AddToEq('6');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number7Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('7');
+            viewModel.AddToEq('7');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number8Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('8');
+            viewModel.AddToEq('8');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number9Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('9');
+            viewModel.AddToEq('9');
             InputTextBox.Text = viewModel.Equation;
         }
 
         private void Number0Button_Click(object sender, EventArgs e)
         {
-            viewModel.addToEq('0');
+            viewModel.AddToEq('0');
             InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void OperatorPlusButton_Click(object sender, EventArgs e)
+        {
+            viewModel.AddToEq('+');
+            InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void OperatorMinusButton_Click(object sender, EventArgs e)
+        {
+            viewModel.AddToEq('-');
+            InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void OperatorMultButton_Click(object sender, EventArgs e)
+        {
+            viewModel.AddToEq('*');
+            InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void OperatorDivButton_Click(object sender, EventArgs e)
+        {
+            viewModel.AddToEq('/');
+            InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void OperatorBracketStartButton_Click(object sender, EventArgs e)
+        {
+            viewModel.AddToEq('(');
+            InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void OperatorBracketEndButton_Click(object sender, EventArgs e)
+        {
+            viewModel.AddToEq(')');
+            InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void EraseCharButton_Click(object sender, EventArgs e)
+        {
+            viewModel.EraseFromEq();
+            InputTextBox.Text = viewModel.Equation;
+        }
+
+        private void OperatorEqButton_Click(object sender, EventArgs e)
+        {
+            viewModel.Parse();
+            label1.Text = viewModel.EquationOut;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            viewModel.Evaluate();
         }
     }
 }

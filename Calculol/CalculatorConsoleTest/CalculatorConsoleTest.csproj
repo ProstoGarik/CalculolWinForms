@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DBB7C8AC-6F3E-4821-9A23-259E9786977E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Calculol</RootNamespace>
-    <AssemblyName>Calculol</AssemblyName>
+    <ProjectGuid>{ABDF7C8D-C075-426A-8D6F-D7569FB0468F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CalculatorConsoleTest</RootNamespace>
+    <AssemblyName>CalculatorConsoleTest</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,56 +39,15 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client\CalculatorMainScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Client\CalculatorMainScreen.Designer.cs">
-      <DependentUpon>CalculatorMainScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Client\ViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Client\CalculatorMainScreen.resx">
-      <DependentUpon>CalculatorMainScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CalculolClassLibrary\CalculolClassLibrary.csproj">
-      <Project>{d8b4e738-71aa-40ac-8f4e-676d26e51e1c}</Project>
-      <Name>CalculolClassLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FrutigerBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
