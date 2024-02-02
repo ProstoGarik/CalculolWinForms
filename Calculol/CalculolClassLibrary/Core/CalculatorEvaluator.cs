@@ -19,7 +19,10 @@ namespace Calculol.Core
             {
                 if (!operators.Contains(token))
                 {
-                    values.Push(double.Parse(token));
+                    if (token != "")
+                    {
+                        values.Push(double.Parse(token));
+                    }       
                 }
                 else
                 {

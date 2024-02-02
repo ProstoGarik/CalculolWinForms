@@ -123,15 +123,12 @@ namespace Calculol
             InputTextBox.Text = viewModel.Equation;
         }
 
-        private void OperatorEqButton_Click(object sender, EventArgs e)
-        {
-            viewModel.Parse();
-            label1.Text = viewModel.EquationOut;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            viewModel.Evaluate();
+            
+            OutputTextBox.Text = viewModel.Evaluate().ToString();
         }
+
+        
     }
 }

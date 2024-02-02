@@ -12,8 +12,7 @@ namespace Calculol.Client
 {
     public class ViewModel
     {
-        public string Equation;
-        public string EquationOut = "";
+        public string Equation = " ";
 
         private CalculatorParser parser;
         private CalculatorEvaluator evaluator;
@@ -43,22 +42,15 @@ namespace Calculol.Client
             {
                 Equation = Equation.Remove(Equation.Length - 1);
                 Equation = Equation.Remove(Equation.Length - 1);
+                
             }
             
         }
 
-        public void Parse()
+        public double Evaluate()
         {
-            foreach(string i in parser.Parse(Equation))
-            {
-                EquationOut += i;
-            }
-        }
-
-        public void Evaluate()
-        {
-            Equation.Trim();
-            evaluator.EvaluatePostfix(parser.Parse(Equation));
+            string EqTrim = Equation.Trim();
+            return evaluator.EvaluatePostfix(parser.Parse(EqTrim));
         }
     }
 }
