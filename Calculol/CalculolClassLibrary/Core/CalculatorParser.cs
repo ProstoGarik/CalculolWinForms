@@ -56,6 +56,8 @@ namespace Calculol.Core
         {
             switch (c)
             {
+                case "^":
+                    return 5;
                 case "/":
                     return 4;
                 case "*":
@@ -76,7 +78,7 @@ namespace Calculol.Core
         /// <returns>True, если токен - оператор </returns>
         private bool isOperator(string c)
         {
-            if (c == "+" || c == "-" || c == "*" || c == "/")
+            if (c == "+" || c == "-" || c == "*" || c == "/" || c == "^")
             {
                 return true;
             }

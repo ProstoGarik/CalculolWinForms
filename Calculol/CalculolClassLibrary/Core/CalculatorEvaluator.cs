@@ -8,7 +8,7 @@ namespace Calculol.Core
 {
     public class CalculatorEvaluator
     {
-        string[] operators = { "+", "-", "/", "*" };
+        string[] operators = { "+", "-", "/", "*", "^"};
 
         public double EvaluatePostfix(List<string> equation)
         {
@@ -37,7 +37,7 @@ namespace Calculol.Core
                         case "-":
                             a = values.Pop();
                             b = values.Pop();
-                            values.Push(a - b);
+                            values.Push(b - a);
                             break;
 
                         case "*":
@@ -49,7 +49,12 @@ namespace Calculol.Core
                         case "/":
                             a = values.Pop();
                             b = values.Pop();
-                            values.Push(a / b);
+                            values.Push(b / a);
+                            break;
+                        case "^":
+                            a = values.Pop();
+                            b = values.Pop();
+                            values.Push(Math.Pow(b,a));
                             break;
                     }
                 }

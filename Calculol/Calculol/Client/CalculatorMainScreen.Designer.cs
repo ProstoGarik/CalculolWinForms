@@ -51,6 +51,8 @@
             this.Number2Button = new System.Windows.Forms.Button();
             this.Number1Button = new System.Windows.Forms.Button();
             this.ScreenOutputPicBox = new System.Windows.Forms.PictureBox();
+            this.ClearAllButton = new System.Windows.Forms.Button();
+            this.OperatorPow2Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ScreenInputPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScreenOutputPicBox)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +62,7 @@
             this.InputTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InputTextBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.InputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.InputTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.InputTextBox.Location = new System.Drawing.Point(29, 21);
             this.InputTextBox.Multiline = true;
@@ -73,7 +75,7 @@
             // 
             this.OutputTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.OutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OutputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OutputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OutputTextBox.Location = new System.Drawing.Point(248, 21);
             this.OutputTextBox.Multiline = true;
             this.OutputTextBox.Name = "OutputTextBox";
@@ -111,7 +113,7 @@
             this.EraseCharButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EraseCharButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.EraseCharButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EraseCharButton.Location = new System.Drawing.Point(178, 124);
+            this.EraseCharButton.Location = new System.Drawing.Point(14, 124);
             this.EraseCharButton.Name = "EraseCharButton";
             this.EraseCharButton.Size = new System.Drawing.Size(59, 61);
             this.EraseCharButton.TabIndex = 20;
@@ -125,7 +127,7 @@
             this.OperatorBracketEndButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.OperatorBracketEndButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.OperatorBracketEndButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OperatorBracketEndButton.Location = new System.Drawing.Point(97, 124);
+            this.OperatorBracketEndButton.Location = new System.Drawing.Point(178, 393);
             this.OperatorBracketEndButton.Name = "OperatorBracketEndButton";
             this.OperatorBracketEndButton.Size = new System.Drawing.Size(59, 61);
             this.OperatorBracketEndButton.TabIndex = 17;
@@ -143,7 +145,7 @@
             this.OperatorBracketStartButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InfoText;
             this.OperatorBracketStartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.OperatorBracketStartButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OperatorBracketStartButton.Location = new System.Drawing.Point(14, 124);
+            this.OperatorBracketStartButton.Location = new System.Drawing.Point(97, 392);
             this.OperatorBracketStartButton.Name = "OperatorBracketStartButton";
             this.OperatorBracketStartButton.Size = new System.Drawing.Size(59, 61);
             this.OperatorBracketStartButton.TabIndex = 16;
@@ -199,7 +201,7 @@
             this.Number0Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Number0Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.Number0Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Number0Button.Location = new System.Drawing.Point(97, 392);
+            this.Number0Button.Location = new System.Drawing.Point(14, 393);
             this.Number0Button.Name = "Number0Button";
             this.Number0Button.Size = new System.Drawing.Size(59, 61);
             this.Number0Button.TabIndex = 11;
@@ -358,12 +360,42 @@
             this.ScreenOutputPicBox.TabIndex = 24;
             this.ScreenOutputPicBox.TabStop = false;
             // 
+            // ClearAllButton
+            // 
+            this.ClearAllButton.BackgroundImage = global::Calculol.Properties.Resources.FrutigerBG;
+            this.ClearAllButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClearAllButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ClearAllButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClearAllButton.Location = new System.Drawing.Point(97, 124);
+            this.ClearAllButton.Name = "ClearAllButton";
+            this.ClearAllButton.Size = new System.Drawing.Size(59, 61);
+            this.ClearAllButton.TabIndex = 25;
+            this.ClearAllButton.Text = "CL";
+            this.ClearAllButton.UseVisualStyleBackColor = true;
+            this.ClearAllButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // OperatorPow2Button
+            // 
+            this.OperatorPow2Button.BackgroundImage = global::Calculol.Properties.Resources.FrutigerBG;
+            this.OperatorPow2Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OperatorPow2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.OperatorPow2Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.OperatorPow2Button.Location = new System.Drawing.Point(178, 124);
+            this.OperatorPow2Button.Name = "OperatorPow2Button";
+            this.OperatorPow2Button.Size = new System.Drawing.Size(59, 61);
+            this.OperatorPow2Button.TabIndex = 26;
+            this.OperatorPow2Button.Text = "^";
+            this.OperatorPow2Button.UseVisualStyleBackColor = true;
+            this.OperatorPow2Button.Click += new System.EventHandler(this.OperatorPow2Button_Click);
+            // 
             // CalculatorMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(344, 466);
+            this.Controls.Add(this.OperatorPow2Button);
+            this.Controls.Add(this.ClearAllButton);
             this.Controls.Add(this.OperatorEqButton);
             this.Controls.Add(this.EraseCharButton);
             this.Controls.Add(this.OutputTextBox);
@@ -421,6 +453,8 @@
         private System.Windows.Forms.Button OperatorEqButton;
         private System.Windows.Forms.PictureBox ScreenInputPicBox;
         private System.Windows.Forms.PictureBox ScreenOutputPicBox;
+        private System.Windows.Forms.Button ClearAllButton;
+        private System.Windows.Forms.Button OperatorPow2Button;
     }
 }
 

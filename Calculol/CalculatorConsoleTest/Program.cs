@@ -18,22 +18,10 @@ namespace CalculatorConsoleTest
             List<String> EqOut2 = new List<string>();    
 
 
-            string Eq = "2 + 2 ";
+            string Eq = "2 ^ 3 ";
             string Eq2 = Eq.Trim();
-            parser.Parse(Eq);
-
-            Console.WriteLine(Eq + "O");
-            Console.WriteLine(Eq2 + "O");
-            foreach (var i in parser.Parse(Eq2))
-            {
-                EqOut2.Add(i);
-            }
-            foreach (var item in EqOut2)
-            {
-                Console.Write(item);
-            }
-            Console.WriteLine();
-            Console.WriteLine(evaluator.EvaluatePostfix(EqOut2));
+            
+            Console.WriteLine(Math.Pow(2,3));
             Console.ReadKey();
         }
     }

@@ -117,6 +117,11 @@ namespace Calculol
             InputTextBox.Text = viewModel.Equation;
         }
 
+        private void OperatorPow2Button_Click(object sender, EventArgs e)
+        {
+            viewModel.AddToEq('^');
+            InputTextBox.Text = viewModel.Equation;
+        }
         private void EraseCharButton_Click(object sender, EventArgs e)
         {
             viewModel.EraseFromEq();
@@ -127,6 +132,12 @@ namespace Calculol
         {
             
             OutputTextBox.Text = viewModel.Evaluate().ToString();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            viewModel.ClearAll();
+            InputTextBox.Text = viewModel.Equation;
         }
 
         

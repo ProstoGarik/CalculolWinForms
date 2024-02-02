@@ -30,8 +30,13 @@ namespace Calculol.Client
 
         public void AddToEq(char addToken)
         {
+            if (int.TryParse(addToken.ToString(), out _))
             {
-                Equation += addToken + " ";
+                Equation += addToken;
+            }
+            else
+            {
+                Equation += " " + addToken + " ";
             }
             
         }
@@ -40,11 +45,22 @@ namespace Calculol.Client
         {
             if(!isEmpty())
             {
-                Equation = Equation.Remove(Equation.Length - 1);
-                Equation = Equation.Remove(Equation.Length - 1);
-                
-            }
-            
+                if (Equation[Equation.Length-1] == ' ')
+                {
+                    Equation = Equation.Remove(Equation.Length - 1);
+                    Equation = Equation.Remove(Equation.Length - 1);
+                }
+                else
+                {
+                    Equation = Equation.Remove(Equation.Length - 1);
+                }
+
+            } 
+        }
+
+        public void ClearAll()
+        {
+            Equation = " ";
         }
 
         public double Evaluate()
