@@ -130,8 +130,7 @@ namespace Calculol
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            OutputTextBox.Text = viewModel.Evaluate().ToString();
+            OutputTextBox.Text = viewModel.Evaluate();      
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -140,6 +139,10 @@ namespace Calculol
             InputTextBox.Text = viewModel.Equation;
         }
 
-        
+        private void CalculatorMainScreen_Load(object sender, EventArgs e)
+        {
+            viewModel.SetFont(InputTextBox);
+            viewModel.SetFont(OutputTextBox);
+        }
     }
 }

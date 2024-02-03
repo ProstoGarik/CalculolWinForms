@@ -31,7 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculatorMainScreen));
             this.InputTextBox = new System.Windows.Forms.TextBox();
             this.OutputTextBox = new System.Windows.Forms.TextBox();
-            this.ScreenInputPicBox = new System.Windows.Forms.PictureBox();
+            this.OperatorPow2Button = new System.Windows.Forms.Button();
+            this.ClearAllButton = new System.Windows.Forms.Button();
             this.OperatorEqButton = new System.Windows.Forms.Button();
             this.EraseCharButton = new System.Windows.Forms.Button();
             this.OperatorBracketEndButton = new System.Windows.Forms.Button();
@@ -50,9 +51,8 @@
             this.Number3Button = new System.Windows.Forms.Button();
             this.Number2Button = new System.Windows.Forms.Button();
             this.Number1Button = new System.Windows.Forms.Button();
+            this.ScreenInputPicBox = new System.Windows.Forms.PictureBox();
             this.ScreenOutputPicBox = new System.Windows.Forms.PictureBox();
-            this.ClearAllButton = new System.Windows.Forms.Button();
-            this.OperatorPow2Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ScreenInputPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScreenOutputPicBox)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +62,7 @@
             this.InputTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InputTextBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.InputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.InputTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.InputTextBox.Location = new System.Drawing.Point(29, 21);
             this.InputTextBox.Multiline = true;
@@ -75,7 +75,7 @@
             // 
             this.OutputTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.OutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OutputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OutputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OutputTextBox.Location = new System.Drawing.Point(248, 21);
             this.OutputTextBox.Multiline = true;
             this.OutputTextBox.Name = "OutputTextBox";
@@ -83,15 +83,33 @@
             this.OutputTextBox.Size = new System.Drawing.Size(77, 73);
             this.OutputTextBox.TabIndex = 19;
             // 
-            // ScreenInputPicBox
+            // OperatorPow2Button
             // 
-            this.ScreenInputPicBox.BackgroundImage = global::Calculol.Properties.Resources.FrameGray;
-            this.ScreenInputPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ScreenInputPicBox.Location = new System.Drawing.Point(12, 12);
-            this.ScreenInputPicBox.Name = "ScreenInputPicBox";
-            this.ScreenInputPicBox.Size = new System.Drawing.Size(223, 90);
-            this.ScreenInputPicBox.TabIndex = 23;
-            this.ScreenInputPicBox.TabStop = false;
+            this.OperatorPow2Button.BackgroundImage = global::Calculol.Properties.Resources.FrutigerBG;
+            this.OperatorPow2Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OperatorPow2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.OperatorPow2Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.OperatorPow2Button.Location = new System.Drawing.Point(178, 124);
+            this.OperatorPow2Button.Name = "OperatorPow2Button";
+            this.OperatorPow2Button.Size = new System.Drawing.Size(59, 61);
+            this.OperatorPow2Button.TabIndex = 26;
+            this.OperatorPow2Button.Text = "^";
+            this.OperatorPow2Button.UseVisualStyleBackColor = true;
+            this.OperatorPow2Button.Click += new System.EventHandler(this.OperatorPow2Button_Click);
+            // 
+            // ClearAllButton
+            // 
+            this.ClearAllButton.BackgroundImage = global::Calculol.Properties.Resources.FrutigerBG;
+            this.ClearAllButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClearAllButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ClearAllButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClearAllButton.Location = new System.Drawing.Point(97, 124);
+            this.ClearAllButton.Name = "ClearAllButton";
+            this.ClearAllButton.Size = new System.Drawing.Size(59, 61);
+            this.ClearAllButton.TabIndex = 25;
+            this.ClearAllButton.Text = "CL";
+            this.ClearAllButton.UseVisualStyleBackColor = true;
+            this.ClearAllButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // OperatorEqButton
             // 
@@ -349,6 +367,16 @@
             this.Number1Button.UseVisualStyleBackColor = true;
             this.Number1Button.Click += new System.EventHandler(this.Number1Button_Click);
             // 
+            // ScreenInputPicBox
+            // 
+            this.ScreenInputPicBox.BackgroundImage = global::Calculol.Properties.Resources.FrameGray;
+            this.ScreenInputPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ScreenInputPicBox.Location = new System.Drawing.Point(12, 12);
+            this.ScreenInputPicBox.Name = "ScreenInputPicBox";
+            this.ScreenInputPicBox.Size = new System.Drawing.Size(223, 90);
+            this.ScreenInputPicBox.TabIndex = 23;
+            this.ScreenInputPicBox.TabStop = false;
+            // 
             // ScreenOutputPicBox
             // 
             this.ScreenOutputPicBox.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -359,34 +387,6 @@
             this.ScreenOutputPicBox.Size = new System.Drawing.Size(91, 90);
             this.ScreenOutputPicBox.TabIndex = 24;
             this.ScreenOutputPicBox.TabStop = false;
-            // 
-            // ClearAllButton
-            // 
-            this.ClearAllButton.BackgroundImage = global::Calculol.Properties.Resources.FrutigerBG;
-            this.ClearAllButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearAllButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ClearAllButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClearAllButton.Location = new System.Drawing.Point(97, 124);
-            this.ClearAllButton.Name = "ClearAllButton";
-            this.ClearAllButton.Size = new System.Drawing.Size(59, 61);
-            this.ClearAllButton.TabIndex = 25;
-            this.ClearAllButton.Text = "CL";
-            this.ClearAllButton.UseVisualStyleBackColor = true;
-            this.ClearAllButton.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // OperatorPow2Button
-            // 
-            this.OperatorPow2Button.BackgroundImage = global::Calculol.Properties.Resources.FrutigerBG;
-            this.OperatorPow2Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.OperatorPow2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.OperatorPow2Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OperatorPow2Button.Location = new System.Drawing.Point(178, 124);
-            this.OperatorPow2Button.Name = "OperatorPow2Button";
-            this.OperatorPow2Button.Size = new System.Drawing.Size(59, 61);
-            this.OperatorPow2Button.TabIndex = 26;
-            this.OperatorPow2Button.Text = "^";
-            this.OperatorPow2Button.UseVisualStyleBackColor = true;
-            this.OperatorPow2Button.Click += new System.EventHandler(this.OperatorPow2Button_Click);
             // 
             // CalculatorMainScreen
             // 
@@ -423,6 +423,7 @@
             this.MinimumSize = new System.Drawing.Size(360, 505);
             this.Name = "CalculatorMainScreen";
             this.Text = "Калькулятор";
+            this.Load += new System.EventHandler(this.CalculatorMainScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ScreenInputPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScreenOutputPicBox)).EndInit();
             this.ResumeLayout(false);

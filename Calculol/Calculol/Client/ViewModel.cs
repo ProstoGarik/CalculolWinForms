@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Printing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Calculol.Core;
+using Calculol.Properties;
 using CalculolClassLibrary;
 
 
@@ -16,11 +20,14 @@ namespace Calculol.Client
 
         private CalculatorParser parser;
         private CalculatorEvaluator evaluator;
+        private PrivateFontCollection TypoDigitFont;
 
 
         public ViewModel() {
             parser = new CalculatorParser();
             evaluator = new CalculatorEvaluator();
+            TypoDigitFont = new PrivateFontCollection();
+            TypoDigitFont.AddFontFile(@"..\..\Resources\TypoDigit.ttf");
         }
 
         public bool isEmpty()
@@ -63,10 +70,29 @@ namespace Calculol.Client
             Equation = " ";
         }
 
-        public double Evaluate()
+        public string Evaluate()
         {
             string EqTrim = Equation.Trim();
-            return evaluator.EvaluatePostfix(parser.Parse(EqTrim));
+            try
+            {
+                return evaluator.EvaluatePostfix(parser.Parse(EqTrim)).ToString();
+            }
+            catch
+            {
+                ClearCache();
+                return "Error";
+            }
+        }
+
+        public void SetFont(Control control)
+        {
+            control.Font = new Font(TypoDigitFont.Families[0], control.Font.Size);
+        }
+
+        public void ClearCache()
+        {
+            evaluator = new CalculatorEvaluator();
+            parser = new CalculatorParser();
         }
     }
 }
